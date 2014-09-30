@@ -21,7 +21,7 @@ stdout_stream.max_bytes = 1073741824
 stdout_stream.backup_count = 2
 
 [env:taiga]
-PATH = $PATH:/home/${username}/env/bin
+PATH = \$PATH:/home/${username}/env/bin
 EOF
 
 cat > /tmp/rc.local <<EOF

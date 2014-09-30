@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p ~/.setup
+
 cat > ~/.vimrc <<EOF
 set nocompatible
 

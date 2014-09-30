@@ -17,18 +17,6 @@ EOF
 
 source ~/.virtualenvwrapper-conf.sh
 
-function create-pyenv-if-needed {
-    pushd ~
-
-    for envname in $@; do
-        if [ ! -e ~/$envname ]; then
-            virtualenv env -p python3
-        fi
-    done
-
-    popd
-}
-
 function mkvirtualenv-if-needed {
     for envname in $@; do
         $(lsvirtualenv | grep -q "$envname") || mkvirtualenv "$envname" -p /usr/bin/python3.4
